@@ -1,6 +1,7 @@
 package com.fixit.FixIt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.slf4j.Logger;
@@ -17,6 +18,21 @@ public class EnvironmentConfig {
     
     private final Environment environment;
     
+    @Value("${firebase.project-id}")
+    private String firebaseProjectId;
+    
+    @Value("${firebase.storage-bucket}")
+    private String firebaseStorageBucket;
+    
+    @Value("${firebase.api-key}")
+    private String firebaseApiKey;
+    
+    @Value("${jwt.expiration}")
+    private String jwtExpiration;
+    
+    @Value("${jwt.refresh-expiration}")
+    private String jwtRefreshExpiration;
+    
     @Autowired
     public EnvironmentConfig(Environment environment) {
         this.environment = environment;
@@ -27,29 +43,22 @@ public class EnvironmentConfig {
         logger.info("Validating environment variables...");
         
         // Check Firebase variables
-        checkEnvVariable("FIREBASE_PROJECT_ID", "firebase.project-id");
-        checkEnvVariable("FIREBASE_STORAGE_BUCKET", "firebase.storage-bucket");
-        checkEnvVariable("FIREBASE_API_KEY", "firebase.api-key");
+        logConfigValue("firebase.project-id", firebaseProjectId);
+        logConfigValue("firebase.storage-bucket", firebaseStorageBucket);
+        logConfigValue("firebase.api-key", firebaseApiKey);
         
         // Check JWT variables
-        checkEnvVariable("JWT_EXPIRATION", "jwt.expiration");
-        checkEnvVariable("JWT_REFRESH_EXPIRATION", "jwt.refresh-expiration");
+        logConfigValue("jwt.expiration", jwtExpiration);
+        logConfigValue("jwt.refresh-expiration", jwtRefreshExpiration);
         
         logger.info("Environment validation complete");
     }
     
-    private void checkEnvVariable(String envVar, String propertyName) {
-        String value = environment.getProperty(propertyName);
-        if (value != null) {
-            // Check if we're using a default value (which means env var wasn't provided)
-            String environmentValue = System.getenv(envVar);
-            if (environmentValue == null) {
-                logger.warn("Environment variable {} not set, using default value", envVar);
-            } else {
-                logger.info("Environment variable {} is properly configured", envVar);
-            }
+    private void logConfigValue(String propertyName, String value) {
+        if (value != null && !value.isEmpty()) {
+            logger.info("Configuration property '{}' is set to: {}", propertyName, value);
         } else {
-            logger.error("Missing required property: {}", propertyName);
+            logger.error("Missing required configuration property: {}", propertyName);
         }
     }
 } 

@@ -60,6 +60,15 @@ public class StatusChangeLog {
         this.toStatus = toStatus;
     }
     
+    // Alias methods for compatibility
+    public IssueStatus getPreviousStatus() {
+        return fromStatus;
+    }
+    
+    public IssueStatus getNewStatus() {
+        return toStatus;
+    }
+    
     public String getChangedByAdminUid() {
         return changedByAdminUid;
     }
