@@ -102,6 +102,31 @@ FixIt is a RESTful API backend for a community-driven platform that allows users
 - `POST /api/images/upload` - Upload images
 - `DELETE /api/images/{filename}` - Delete an image
 
+## Credentials Management
+
+### Environment Variables
+
+This application uses environment variables to manage sensitive credentials. Here's how to set them up:
+
+1. Create a `.env` file in the project root (use `.env.example` as a template)
+2. Add your actual credentials to this file
+3. The application will use these values, or fall back to defaults if not found
+
+**Important Security Notes:**
+- NEVER commit `.env` files to version control
+- For production deployments, set environment variables directly in your hosting environment
+- The Firebase service account JSON file should be kept secure and not committed to version control
+
+### Required Credentials
+
+The following environment variables are required:
+
+- `FIREBASE_PROJECT_ID`: Your Firebase project ID
+- `FIREBASE_STORAGE_BUCKET`: Your Firebase storage bucket name
+- `FIREBASE_API_KEY`: Your Firebase API key
+- `JWT_EXPIRATION`: JWT token expiration time in milliseconds
+- `JWT_REFRESH_EXPIRATION`: JWT refresh token expiration time in milliseconds
+
 ## 🏁 Getting Started
 
 ### Prerequisites
