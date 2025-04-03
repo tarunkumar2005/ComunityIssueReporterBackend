@@ -1,0 +1,1050 @@
+2025-03-31 21:29:02,918 INFO [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-03-31 21:29:03,035 INFO [main] com.fixit.FixIt.FixItApplication - Starting FixItApplication using Java 23.0.2 with PID 20418 (/home/tarunkumar/projects/FixIt/target/classes started by tarunkumar in /home/tarunkumar/projects/FixIt)
+2025-03-31 21:29:03,036 DEBUG [main] com.fixit.FixIt.FixItApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 21:29:03,038 INFO [main] com.fixit.FixIt.FixItApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-31 21:29:05,180 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2025-03-31 21:29:05,206 INFO [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8000"]
+2025-03-31 21:29:05,211 INFO [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-31 21:29:05,212 INFO [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 21:29:05,307 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-31 21:29:05,310 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2111 ms
+2025-03-31 21:29:05,430 DEBUG [main] c.f.F.s.FirebaseAuthenticationFilter - Filter 'firebaseAuthenticationFilter' configured for use
+2025-03-31 21:29:05,535 INFO [main] c.fixit.FixIt.config.FirebaseConfig - Initializing Firebase application with projectId: fixit-a7775
+2025-03-31 21:29:05,551 DEBUG [main] c.fixit.FixIt.config.FirebaseConfig - Attempting to load firebase-service-account.json
+2025-03-31 21:29:05,554 DEBUG [main] c.fixit.FixIt.config.FirebaseConfig - Found service account file in classpath
+2025-03-31 21:29:05,554 INFO [main] c.fixit.FixIt.config.FirebaseConfig - Successfully loaded Firebase service account credentials
+2025-03-31 21:29:05,694 INFO [main] c.fixit.FixIt.config.FirebaseConfig - Firebase options configured successfully
+2025-03-31 21:29:05,788 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d604ce26-93da-4b13-880a-e0260ac5e203
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 21:29:05,826 INFO [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-31 21:29:06,471 INFO [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8000"]
+2025-03-31 21:29:06,516 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2025-03-31 21:29:06,531 INFO [main] com.fixit.FixIt.FixItApplication - Started FixItApplication in 4.638 seconds (process running for 5.474)
+2025-03-31 21:29:16,132 INFO [http-nio-0.0.0.0-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 21:29:16,133 INFO [http-nio-0.0.0.0-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-31 21:29:16,135 INFO [http-nio-0.0.0.0-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-31 21:29:17,276 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:29:17,278 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:29:18,209 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:29:18,220 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:29:18,220 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:29:18,221 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:29:18,289 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:29:19,921 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:29:19,936 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:29:19,937 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:29:23,874 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:29:23,875 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:29:23,875 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:29:23,875 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:29:23,876 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:29:23,876 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:29:23,887 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:29:24,277 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:29:24,278 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:29:24,278 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:29:25,973 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:29:25,975 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:29:25,975 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:29:25,976 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:29:25,976 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:29:25,976 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:29:25,980 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:29:26,369 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:29:26,370 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:29:26,371 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:29:31,256 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:29:31,257 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:29:31,257 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:29:31,258 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:29:31,258 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:29:31,259 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:29:31,267 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:29:31,644 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:29:31,647 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:29:31,648 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:05,544 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:05,545 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:05,546 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:05,547 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:05,548 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:05,549 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:05,565 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:07,538 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:07,540 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:07,541 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:07,795 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:07,796 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:07,797 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:07,798 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:07,799 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:07,801 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:07,805 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:08,197 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:08,199 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:08,203 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:08,967 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:08,972 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:08,974 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:08,975 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:08,976 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:08,977 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:08,980 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:09,531 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:09,540 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:09,541 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:09,716 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:09,720 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:09,721 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:09,722 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:09,722 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:09,723 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:09,725 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:10,713 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:10,714 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:10,715 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:13,025 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:13,025 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:13,026 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:13,026 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:13,027 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:13,028 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:13,033 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:13,421 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:13,422 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:13,424 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:13,673 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:13,674 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:13,675 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:13,676 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:13,684 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:13,684 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:13,686 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:14,818 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:14,820 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:14,821 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:16,903 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:16,905 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:16,906 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:16,906 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:16,907 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:16,911 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:16,920 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:17,303 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:17,309 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:17,311 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:17,451 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:17,452 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:17,453 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:17,454 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:17,454 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:17,460 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:17,464 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:18,627 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:18,629 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:18,630 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:19,516 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:19,517 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:19,518 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:19,518 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:19,519 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:19,519 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:19,523 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:19,904 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:19,905 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:19,906 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:34:20,339 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:34:20,342 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:34:20,342 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:34:20,343 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:34:20,344 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:34:20,344 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:34:20,347 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:34:21,226 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:34:21,227 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:34:21,228 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:48:55,711 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:48:55,728 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:48:55,730 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:48:55,732 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:48:55,733 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:48:55,733 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:48:55,755 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:48:57,788 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:48:57,796 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:48:57,798 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:49:05,306 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:49:05,306 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:49:05,307 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:49:05,307 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:49:05,307 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:49:05,308 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:49:05,313 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:49:05,732 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:49:05,735 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:49:05,736 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:49:37,799 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:49:37,802 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:49:37,802 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:49:37,803 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:49:37,804 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:49:37,805 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:49:37,809 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:49:39,001 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:49:39,003 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:49:39,003 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:49:41,703 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:49:41,703 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:49:41,705 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:49:41,705 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:49:41,706 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:49:41,708 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:49:41,711 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:49:42,288 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:49:42,290 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:49:42,291 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:49:44,500 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: IN_PROGRESS, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:49:44,501 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:49:44,501 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:49:44,502 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:49:44,503 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying status filter: IN_PROGRESS
+2025-03-31 21:49:44,504 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:49:44,504 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:49:44,505 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:49:44,865 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 0 documents
+2025-03-31 21:49:44,866 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:49:44,867 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 0 issues (page 1/0, total items: 0)
+2025-03-31 21:49:45,903 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:49:45,905 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:49:45,906 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:49:45,907 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:49:45,910 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:49:45,913 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:49:45,921 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:49:46,318 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:49:46,319 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:49:46,320 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:50:07,699 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:50:07,700 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:50:07,701 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:50:07,702 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:50:07,702 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:50:07,703 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:50:07,706 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:50:08,243 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:50:08,245 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:50:08,246 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:51:42,047 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:51:42,048 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:51:42,049 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:51:42,050 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:51:42,050 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:51:42,051 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:51:42,054 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:51:42,520 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:51:42,523 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:51:42,524 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:51:49,563 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:51:49,564 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:51:49,566 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:51:49,567 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:51:49,568 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:51:49,568 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:51:49,570 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:51:49,958 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:51:49,960 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:51:49,961 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:51:56,318 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:51:56,320 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:51:56,320 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:51:56,321 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:51:56,321 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:51:56,322 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:51:56,332 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:51:56,680 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:51:56,682 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:51:56,683 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:52:06,991 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:52:06,992 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:52:06,993 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:52:06,994 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:52:06,995 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:52:06,995 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:52:06,998 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:52:07,387 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:52:07,389 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:52:07,390 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 21:52:18,356 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 21:52:18,357 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 21:52:18,357 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 21:52:18,358 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 21:52:18,358 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 21:52:18,359 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 21:52:18,363 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 21:52:18,736 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 21:52:18,737 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 21:52:18,738 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:01:54,082 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:01:54,087 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:01:54,088 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:01:54,090 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:01:54,090 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:01:54,091 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:01:54,105 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:01:56,147 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:01:56,151 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:01:56,152 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:05:50,972 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:05:50,974 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:05:50,974 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:05:50,975 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:05:50,976 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:05:50,977 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:05:50,997 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:05:53,030 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:05:53,032 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:05:53,033 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:17:27,419 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:17:27,423 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:17:27,425 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:17:27,426 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:17:27,427 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:17:27,428 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:17:27,439 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:17:28,205 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:17:28,208 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:17:28,209 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:27:18,809 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:27:18,811 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:27:18,812 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:27:18,814 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:27:18,816 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:27:18,817 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:27:18,828 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:27:21,413 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:27:21,415 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:27:21,416 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:34:19,589 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:34:19,593 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:34:19,594 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:34:19,595 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:34:19,596 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:34:19,597 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:34:19,610 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:34:20,036 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:34:20,039 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:34:20,040 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:41:54,991 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:41:54,993 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:41:54,993 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:41:54,995 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:41:54,995 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:41:54,996 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:41:55,004 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:41:57,194 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:41:57,212 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:41:57,212 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:42:29,425 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:42:29,427 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:42:29,428 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:42:29,430 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:42:29,430 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:42:29,432 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:42:29,436 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:42:29,865 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:42:29,869 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:42:29,869 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:46:36,809 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:46:36,811 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:46:36,812 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:46:36,812 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:46:36,813 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:46:36,814 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:46:36,819 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:46:38,803 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:46:38,805 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:46:38,806 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:47:03,512 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:47:03,513 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:47:03,513 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:47:03,514 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:47:03,515 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:47:03,516 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:47:03,521 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:47:03,966 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:47:03,968 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:47:03,969 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:47:04,818 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 22:47:04,819 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 22:47:04,821 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 22:47:04,822 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 22:47:04,823 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 22:47:04,824 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 22:47:04,826 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 22:47:05,222 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 22:47:05,224 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 22:47:05,224 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 22:47:32,831 INFO [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 22:47:32,867 INFO [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-31 22:53:54,874 INFO [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-03-31 22:53:55,023 INFO [main] com.fixit.FixIt.FixItApplication - Starting FixItApplication using Java 23.0.2 with PID 37495 (/home/tarunkumar/projects/FixIt/target/classes started by tarunkumar in /home/tarunkumar/projects/FixIt)
+2025-03-31 22:53:55,024 DEBUG [main] com.fixit.FixIt.FixItApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-03-31 22:53:55,026 INFO [main] com.fixit.FixIt.FixItApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-31 22:53:56,896 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2025-03-31 22:53:56,918 INFO [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8000"]
+2025-03-31 22:53:56,922 INFO [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-31 22:53:56,923 INFO [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-03-31 22:53:57,009 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-31 22:53:57,011 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1841 ms
+2025-03-31 22:53:57,106 DEBUG [main] c.f.F.s.FirebaseAuthenticationFilter - Filter 'firebaseAuthenticationFilter' configured for use
+2025-03-31 22:53:57,200 INFO [main] c.fixit.FixIt.config.FirebaseConfig - Initializing Firebase application with projectId: fixit-a7775
+2025-03-31 22:53:57,210 DEBUG [main] c.fixit.FixIt.config.FirebaseConfig - Attempting to load firebase-service-account.json
+2025-03-31 22:53:57,211 DEBUG [main] c.fixit.FixIt.config.FirebaseConfig - Found service account file in classpath
+2025-03-31 22:53:57,212 INFO [main] c.fixit.FixIt.config.FirebaseConfig - Successfully loaded Firebase service account credentials
+2025-03-31 22:53:57,311 INFO [main] c.fixit.FixIt.config.FirebaseConfig - Firebase options configured successfully
+2025-03-31 22:53:57,401 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ae61746b-94fe-4251-a200-d3d33c432d6e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-31 22:53:57,437 INFO [main] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-31 22:53:58,014 INFO [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8000"]
+2025-03-31 22:53:58,080 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2025-03-31 22:53:58,101 INFO [main] com.fixit.FixIt.FixItApplication - Started FixItApplication in 4.097 seconds (process running for 4.739)
+2025-03-31 22:54:42,464 INFO [http-nio-0.0.0.0-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-31 22:54:42,470 INFO [http-nio-0.0.0.0-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-31 22:54:42,480 INFO [http-nio-0.0.0.0-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2025-03-31 22:54:43,202 INFO [http-nio-0.0.0.0-8000-exec-1] c.f.FixIt.controller.AuthController - Processing signup request for email: john.doe@gmail.com
+2025-03-31 22:54:53,752 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.f.FixIt.controller.AuthController - User data from sign in: {lastLogin=2025-03-31T17:24:49.839000000Z, uid=JXoiAmnJcahQ2un5mfHIPGkN38q1, accountCreationDate=2025-03-31T17:24:49.839000000Z, role=USER, displayName=John Doe, name=John Doe, notificationPreferences={ownIssues=true, communityActivity=false}, email=john.doe@gmail.com, username=johndoe1, token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImE5ZGRjYTc2YzEyMzMyNmI5ZTJlODJkOGFjNDg0MWU1MzMyMmI3NmEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiSm9obiBEb2UiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZml4aXQtYTc3NzUiLCJhdWQiOiJmaXhpdC1hNzc3NSIsImF1dGhfdGltZSI6MTc0MzQ0MTg5MSwidXNlcl9pZCI6IkpYb2lBbW5KY2FoUTJ1bjVtZkhJUEdrTjM4cTEiLCJzdWIiOiJKWG9pQW1uSmNhaFEydW41bWZISVBHa04zOHExIiwiaWF0IjoxNzQzNDQxODkxLCJleHAiOjE3NDM0NDU0OTEsImVtYWlsIjoiam9obi5kb2VAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpvaG4uZG9lQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ApzqLIfbZrqeqXQSJqEZrjtUA6wMllBz_onJuBCiU63Yx5pV2FuQ-FSSiq1wFhRs0X_-p5Ex3pum8KKFb69wMGsA-vNOjkZTpqqngVJ-dPG3MALoqytVqqgj1FFN5ZGIGV17X3azfprGusj9Sq1UQVx0bUUgQz1OXm4L7r3NdO6vBnORXioOTcIQvdD76oGBhfk5JWbuZol_NlRnpRBYr6BX-fn3D8telFSqa5ISoDVMqO_nnKhIz6WaoOHs-82lzAIY6Z3ngZLVvmwzCY8GPiLsEtQ64MrEIscE6EF7b9MU1dvM4Jzd4IjckRJpO2cYS_HhRiZuDFtrTfPjwxeLog}
+2025-03-31 22:54:53,767 INFO [http-nio-0.0.0.0-8000-exec-1] c.f.FixIt.controller.AuthController - User registered successfully with uid: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:55:28,187 INFO [http-nio-0.0.0.0-8000-exec-2] c.f.FixIt.controller.UserController - Getting profile for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:55:28,190 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:55:29,987 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - Getting issue statistics for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:55:31,644 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - User JXoiAmnJcahQ2un5mfHIPGkN38q1 has reported 0 issues, with 0 resolved
+2025-03-31 22:56:03,374 INFO [http-nio-0.0.0.0-8000-exec-3] c.f.FixIt.controller.UserController - Updating profile for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:03,375 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Updating profile for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:03,765 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Updating name from 'John Doe' to 'John Smith'
+2025-03-31 22:56:04,935 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Firebase Auth display name updated successfully
+2025-03-31 22:56:04,935 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Profile updated successfully for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:05,361 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:07,126 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Getting issue statistics for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:08,832 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - User JXoiAmnJcahQ2un5mfHIPGkN38q1 has reported 0 issues, with 0 resolved
+2025-03-31 22:56:20,970 INFO [http-nio-0.0.0.0-8000-exec-4] c.f.FixIt.controller.UserController - Updating profile for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:20,971 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Updating profile for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:21,448 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Updated notification preferences: {ownIssues=true, communityActivity=true}
+2025-03-31 22:56:21,449 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Profile updated successfully for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:22,768 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:24,433 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Getting issue statistics for user: JXoiAmnJcahQ2un5mfHIPGkN38q1
+2025-03-31 22:56:26,109 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - User JXoiAmnJcahQ2un5mfHIPGkN38q1 has reported 0 issues, with 0 resolved
+2025-03-31 23:03:08,576 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:03:08,578 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:03:08,579 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:03:08,579 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:03:08,580 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:03:08,580 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:03:08,586 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:03:10,641 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:03:10,647 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:03:10,648 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:03:13,463 INFO [http-nio-0.0.0.0-8000-exec-7] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:13,464 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:15,298 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:17,045 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:03:23,176 INFO [http-nio-0.0.0.0-8000-exec-8] c.f.FixIt.controller.UserController - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:23,177 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:23,590 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Updating name from 'null' to 'tarunkumar'
+2025-03-31 23:03:24,622 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Firebase Auth display name updated successfully
+2025-03-31 23:03:24,622 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Profile updated successfully for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:25,005 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:26,830 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:28,527 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:03:32,833 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:03:32,833 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:03:32,834 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:03:32,834 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:03:32,834 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:03:32,835 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:03:32,837 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:03:33,251 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:03:33,254 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:03:33,254 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:03:34,414 INFO [http-nio-0.0.0.0-8000-exec-10] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:34,415 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:36,146 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:03:37,835 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:13:51,485 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:13:51,487 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:13:51,487 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:13:51,488 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:13:51,488 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:13:51,489 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:13:51,500 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:13:53,606 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:13:53,608 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:13:53,609 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:13:55,337 INFO [http-nio-0.0.0.0-8000-exec-5] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:13:55,338 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:13:57,047 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:13:59,146 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:14:09,314 INFO [http-nio-0.0.0.0-8000-exec-6] c.f.FixIt.controller.UserController - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:09,315 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:09,765 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Profile updated successfully for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:11,072 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:13,202 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:14,923 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:14:21,355 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:14:21,355 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:14:21,356 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:14:21,356 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:14:21,357 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:14:21,357 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:14:21,360 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:14:21,735 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:14:21,737 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:14:21,737 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:14:23,806 INFO [http-nio-0.0.0.0-8000-exec-8] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:23,807 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:25,487 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:14:27,202 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:19:51,654 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:19:51,661 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:19:51,662 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:19:51,664 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:19:51,665 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:19:51,666 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:19:51,678 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:19:52,812 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:19:52,815 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:19:52,817 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:19:55,875 INFO [http-nio-0.0.0.0-8000-exec-3] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:19:55,876 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:19:57,571 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:19:59,249 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:20:06,553 INFO [http-nio-0.0.0.0-8000-exec-4] c.f.FixIt.controller.UserController - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:06,554 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:06,920 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Updating name from 'tarunkumar' to 'tarunkumar123'
+2025-03-31 23:20:08,380 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Firebase Auth display name updated successfully
+2025-03-31 23:20:08,380 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Profile updated successfully for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:08,801 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:10,535 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:12,216 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:20:27,871 INFO [http-nio-0.0.0.0-8000-exec-5] c.f.FixIt.controller.UserController - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:27,872 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Updating profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:28,266 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Updating name from 'tarunkumar123' to 'Tarun Kumar'
+2025-03-31 23:20:29,521 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Firebase Auth display name updated successfully
+2025-03-31 23:20:29,522 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Profile updated successfully for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:29,895 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:31,654 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:33,414 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:20:41,233 INFO [http-nio-0.0.0.0-8000-exec-6] c.f.FixIt.controller.UserController - Updating notification preferences for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:41,233 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Updating notification preferences for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:41,742 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Updated preference 'communityActivity' from 'false' to 'true'
+2025-03-31 23:20:41,743 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Notification preferences updated successfully for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:43,367 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:45,192 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:46,847 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:20:47,859 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:20:47,862 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:20:47,862 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:20:47,864 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:20:47,864 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:20:47,865 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:20:47,874 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:20:48,269 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:20:48,271 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:20:48,271 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:20:50,027 INFO [http-nio-0.0.0.0-8000-exec-8] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:50,028 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:51,711 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:20:53,351 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:20:58,693 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:20:58,694 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:20:58,694 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:20:58,695 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:20:58,696 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:20:58,696 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:20:58,709 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:20:59,088 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:20:59,089 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:20:59,090 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:25:58,874 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:25:58,888 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:25:58,889 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:25:58,889 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:25:58,890 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:25:58,891 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:25:58,900 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:00,932 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:00,934 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:00,935 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:26:13,649 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:26:13,650 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:26:13,651 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:26:13,652 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:26:13,652 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:26:13,653 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:26:13,657 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:14,174 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:14,175 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:14,176 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:26:32,311 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:26:32,312 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:26:32,312 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:26:32,313 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:26:32,313 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:26:32,314 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:26:32,324 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:32,720 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:32,721 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:32,722 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:26:42,584 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:26:42,586 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:26:42,587 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:26:42,589 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:26:42,590 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:26:42,591 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:26:42,594 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:43,733 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:43,734 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:43,735 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:26:49,565 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:26:49,566 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:26:49,568 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:26:49,568 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:26:49,569 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:26:49,569 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:26:49,572 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:50,471 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:50,473 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:50,474 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:26:53,845 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:26:53,846 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:26:53,846 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:26:53,847 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:26:53,848 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:26:53,848 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:26:53,851 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:54,422 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:54,423 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:54,434 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:26:56,796 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:26:56,797 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:26:56,798 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:26:56,798 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:26:56,799 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:26:56,800 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:26:56,802 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:26:57,306 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:26:57,307 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:26:57,308 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:36:58,993 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:36:58,994 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:36:58,995 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:36:58,996 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:36:58,996 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:36:58,997 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:36:59,002 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:37:00,960 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:37:00,963 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:37:00,965 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:37:17,403 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:37:17,404 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:37:17,405 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:37:17,405 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:37:17,406 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:37:17,406 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:37:17,416 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:37:17,816 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:37:17,818 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:37:17,829 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:41:03,703 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:41:03,707 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:41:03,708 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:41:03,709 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:41:03,711 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:41:03,712 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:41:03,723 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:41:04,110 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:41:04,112 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:41:04,113 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:41:15,873 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:41:15,874 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:41:15,877 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:41:15,877 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:41:15,882 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:41:15,883 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:41:15,885 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:41:16,243 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:41:16,245 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:41:16,246 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:42:06,541 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:42:06,542 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:42:06,554 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:42:06,554 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:42:06,555 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:42:06,556 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:42:06,558 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:42:06,905 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:42:06,906 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:42:06,918 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:42:16,736 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:42:16,737 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:42:16,738 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:42:16,738 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:42:16,739 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:42:16,740 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:42:16,742 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:42:17,103 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:42:17,105 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:42:17,105 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:42:23,199 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:42:23,201 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:42:23,202 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:42:23,203 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:42:23,205 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:42:23,205 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:42:23,207 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:42:23,607 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:42:23,609 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:42:23,610 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:42:30,728 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:42:30,729 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:42:30,730 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:42:30,731 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:42:30,732 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:42:30,733 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:42:30,734 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:42:31,074 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:42:31,075 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:42:31,075 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:42:35,319 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:42:35,320 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:42:35,321 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:42:35,321 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:42:35,322 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:42:35,322 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:42:35,324 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:42:35,728 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:42:35,729 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:42:35,730 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:42:38,134 INFO [http-nio-0.0.0.0-8000-exec-10] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:42:38,135 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:42:39,858 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:42:41,572 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:42:43,751 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:42:43,752 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:42:43,752 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:42:43,753 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:42:43,753 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:42:43,753 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:42:43,755 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:42:44,142 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:42:44,143 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:42:44,143 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:46:36,458 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:46:36,460 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:46:36,460 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:46:36,461 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:46:36,461 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:46:36,462 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:46:36,465 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:46:36,832 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:46:36,834 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:46:36,835 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:46:44,666 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:46:44,667 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:46:44,668 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:46:44,670 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:46:44,670 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:46:44,671 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:46:44,672 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:46:45,304 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:46:45,307 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:46:45,307 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:46:49,546 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:46:49,547 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:46:49,547 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:46:49,548 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:46:49,548 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:46:49,549 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:46:49,550 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:46:49,927 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:46:49,929 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:46:49,930 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:46:58,274 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:46:58,274 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:46:58,275 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:46:58,275 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:46:58,276 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:46:58,276 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:46:58,281 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:46:59,138 DEBUG [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:46:59,142 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:46:59,142 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:47:02,114 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:02,115 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:02,116 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:02,117 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:02,118 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:02,118 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:02,121 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:02,558 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:47:02,559 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:02,559 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:47:05,249 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: IN_PROGRESS, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:05,249 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:05,250 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:05,250 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:05,251 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying status filter: IN_PROGRESS
+2025-03-31 23:47:05,262 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:05,263 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:05,264 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:05,615 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 0 documents
+2025-03-31 23:47:05,615 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:05,616 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 0 issues (page 1/0, total items: 0)
+2025-03-31 23:47:06,266 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: RESOLVED, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:06,267 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:06,268 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:06,268 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:06,269 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying status filter: RESOLVED
+2025-03-31 23:47:06,270 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:06,270 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:06,273 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:06,987 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 0 documents
+2025-03-31 23:47:06,987 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:06,989 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 0 issues (page 1/0, total items: 0)
+2025-03-31 23:47:38,838 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: RESOLVED, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:38,839 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:38,840 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:38,841 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:38,842 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying status filter: RESOLVED
+2025-03-31 23:47:38,842 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:38,843 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:38,844 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:39,190 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 0 documents
+2025-03-31 23:47:39,191 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:39,192 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 0 issues (page 1/0, total items: 0)
+2025-03-31 23:47:42,909 INFO [http-nio-0.0.0.0-8000-exec-2] c.f.F.controller.ImageController - Uploading file: name=image4702764873946770104.jpg, size=130191, contentType=image/jpeg
+2025-03-31 23:47:44,816 INFO [http-nio-0.0.0.0-8000-exec-2] c.f.F.controller.ImageController - Image uploaded successfully: /api/images/5b10b5ef-48a7-4f11-a8cf-601148cdf543
+2025-03-31 23:47:45,043 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Creating new issue with title: Tarun Issue
+2025-03-31 23:47:45,506 INFO [http-nio-0.0.0.0-8000-exec-3] c.fixit.FixIt.service.IssueService - Issue created successfully with ID: nWQh96zw71V3ZZFoh56Y
+2025-03-31 23:47:45,584 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: RESOLVED, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:45,584 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:45,585 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:45,585 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:45,585 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying status filter: RESOLVED
+2025-03-31 23:47:45,586 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:45,586 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:45,598 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:46,806 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 0 documents
+2025-03-31 23:47:46,807 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:46,808 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 0 issues (page 1/0, total items: 0)
+2025-03-31 23:47:49,084 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: OPEN, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:49,084 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:49,085 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:49,085 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:49,086 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying status filter: OPEN
+2025-03-31 23:47:49,086 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:49,087 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:49,089 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:49,485 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:47:49,487 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:49,487 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:47:51,056 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:47:51,057 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:47:51,058 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:47:51,059 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:47:51,060 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:47:51,061 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:47:51,064 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:47:51,428 DEBUG [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:47:51,431 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:47:51,432 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:47:56,407 INFO [http-nio-0.0.0.0-8000-exec-9] c.f.F.controller.ImageController - Image retrieved: 5b10b5ef-48a7-4f11-a8cf-601148cdf543
+2025-03-31 23:48:01,819 INFO [http-nio-0.0.0.0-8000-exec-6] c.f.F.controller.ImageController - Image retrieved: 5b10b5ef-48a7-4f11-a8cf-601148cdf543
+2025-03-31 23:48:11,797 INFO [http-nio-0.0.0.0-8000-exec-7] c.f.F.controller.ImageController - Uploading file: name=image1531343367622161271.jpg, size=205367, contentType=image/jpeg
+2025-03-31 23:48:12,164 INFO [http-nio-0.0.0.0-8000-exec-9] c.f.F.controller.ImageController - Image retrieved: 5b10b5ef-48a7-4f11-a8cf-601148cdf543
+2025-03-31 23:48:14,356 INFO [http-nio-0.0.0.0-8000-exec-7] c.f.F.controller.ImageController - Image uploaded successfully: /api/images/41d18a44-672b-4851-a2d4-731cf8486973
+2025-03-31 23:48:22,864 INFO [http-nio-0.0.0.0-8000-exec-6] c.f.F.controller.ImageController - Image retrieved: 41d18a44-672b-4851-a2d4-731cf8486973
+2025-03-31 23:48:27,192 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:48:27,193 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:48:27,193 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:48:27,194 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:48:27,195 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:48:27,196 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:48:27,198 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:48:27,581 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:48:27,583 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:48:27,584 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:48:29,017 INFO [http-nio-0.0.0.0-8000-exec-3] c.f.F.controller.ImageController - Image retrieved: 41d18a44-672b-4851-a2d4-731cf8486973
+2025-03-31 23:48:31,790 INFO [http-nio-0.0.0.0-8000-exec-8] c.f.F.controller.ImageController - Image retrieved: 41d18a44-672b-4851-a2d4-731cf8486973
+2025-03-31 23:48:38,283 INFO [http-nio-0.0.0.0-8000-exec-3] c.f.F.controller.ImageController - Image retrieved: 41d18a44-672b-4851-a2d4-731cf8486973
+2025-03-31 23:48:58,750 INFO [http-nio-0.0.0.0-8000-exec-2] c.f.F.controller.ImageController - Image retrieved: 41d18a44-672b-4851-a2d4-731cf8486973
+2025-03-31 23:49:02,140 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:02,141 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:02,142 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:02,142 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:02,143 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:02,144 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:02,146 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:02,570 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:49:02,571 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:02,572 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:49:08,197 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:08,198 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:08,199 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:08,199 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:08,200 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:08,200 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:08,202 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:08,612 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:49:08,614 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:08,615 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:49:14,739 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:14,740 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:14,742 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:14,742 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:14,743 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:14,744 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:14,746 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:15,330 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:49:15,332 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:15,333 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:49:19,128 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:19,129 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:19,129 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:19,129 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:19,130 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:19,130 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:19,131 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:19,635 DEBUG [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:49:19,637 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:19,638 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:49:21,409 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:21,410 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:21,411 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:21,412 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:21,413 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:21,413 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:21,416 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:21,789 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:49:21,791 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:21,792 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:49:33,383 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:33,384 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:33,385 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:33,385 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:33,386 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:33,386 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:33,388 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:33,808 DEBUG [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:49:33,809 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:33,810 INFO [http-nio-0.0.0.0-8000-exec-6] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:49:41,131 INFO [http-nio-0.0.0.0-8000-exec-8] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:49:41,132 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:49:41,830 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:49:42,597 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 0 issues, with 0 resolved
+2025-03-31 23:49:52,247 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:49:52,248 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:49:52,248 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:49:52,250 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:49:52,251 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:49:52,252 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:49:52,255 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:49:52,618 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:49:52,619 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:49:52,620 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:50:10,943 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:50:10,944 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:10,944 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:10,945 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:10,946 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:10,946 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:10,948 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:11,306 DEBUG [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Count query completed, found 4 documents
+2025-03-31 23:50:11,307 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:11,308 INFO [http-nio-0.0.0.0-8000-exec-7] c.fixit.FixIt.service.IssueService - Successfully fetched 4 issues (page 1/1, total items: 4)
+2025-03-31 23:50:13,397 INFO [http-nio-0.0.0.0-8000-exec-1] c.f.F.controller.ImageController - Uploading file: name=image4839723007348353923.jpg, size=130191, contentType=image/jpeg
+2025-03-31 23:50:15,306 INFO [http-nio-0.0.0.0-8000-exec-1] c.f.F.controller.ImageController - Image uploaded successfully: /api/images/b321c7c6-6fd8-438d-aa5e-24589b64b421
+2025-03-31 23:50:15,355 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Creating new issue with title: Tarun Issue
+2025-03-31 23:50:15,974 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.IssueService - Issue created successfully with ID: a3zsGijJbAX8ooMDOYGE
+2025-03-31 23:50:16,097 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 3, size: 10
+2025-03-31 23:50:16,111 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:16,112 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:16,113 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:16,113 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:16,113 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:16,115 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:16,467 DEBUG [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:50:16,468 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:16,469 INFO [http-nio-0.0.0.0-8000-exec-10] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 3/1, total items: 5)
+2025-03-31 23:50:20,563 INFO [http-nio-0.0.0.0-8000-exec-4] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:20,564 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:21,321 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:22,069 INFO [http-nio-0.0.0.0-8000-exec-4] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 1 issues, with 0 resolved
+2025-03-31 23:50:25,705 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:50:25,706 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:25,707 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:25,707 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:25,708 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:25,708 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:25,709 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:26,071 DEBUG [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:50:26,072 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:26,072 INFO [http-nio-0.0.0.0-8000-exec-9] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:50:26,562 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:50:26,562 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:26,563 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:26,563 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:26,563 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:26,564 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:26,565 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:26,916 DEBUG [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:50:26,917 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:26,918 INFO [http-nio-0.0.0.0-8000-exec-8] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:50:29,726 INFO [http-nio-0.0.0.0-8000-exec-3] c.f.F.controller.ImageController - Image retrieved: b321c7c6-6fd8-438d-aa5e-24589b64b421
+2025-03-31 23:50:29,993 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:50:29,994 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:29,995 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:29,995 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:29,995 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:29,996 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:29,997 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:30,343 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:50:30,344 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:30,344 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:50:31,219 INFO [http-nio-0.0.0.0-8000-exec-2] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:31,219 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:32,004 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:32,745 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 1 issues, with 0 resolved
+2025-03-31 23:50:36,696 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:50:36,697 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:36,697 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:36,698 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:36,698 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:36,698 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:36,700 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:37,046 DEBUG [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:50:37,047 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:37,048 INFO [http-nio-0.0.0.0-8000-exec-5] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:50:40,635 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Fetching issues with filters - status: null, location: null, reporterUid: null, searchTerm: null, minUpvotes: null, startDate: null, endDate: null, sort: createdAt,desc, page: 1, size: 10
+2025-03-31 23:50:40,636 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Getting Firestore instance
+2025-03-31 23:50:40,636 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Firestore instance obtained: success
+2025-03-31 23:50:40,638 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Collection reference obtained: issues
+2025-03-31 23:50:40,639 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Executing count query with limit 1000
+2025-03-31 23:50:40,639 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - About to execute get() on query
+2025-03-31 23:50:40,641 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Query future obtained, waiting for result
+2025-03-31 23:50:41,010 DEBUG [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Count query completed, found 5 documents
+2025-03-31 23:50:41,011 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Applying explicit sorting to results: createdAt,desc
+2025-03-31 23:50:41,011 INFO [http-nio-0.0.0.0-8000-exec-1] c.fixit.FixIt.service.IssueService - Successfully fetched 5 issues (page 1/1, total items: 5)
+2025-03-31 23:50:42,980 INFO [http-nio-0.0.0.0-8000-exec-2] c.f.FixIt.controller.UserController - Getting profile for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:42,981 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - Getting user profile with stats for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:43,724 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - Getting issue statistics for user: XZEgSgnZZbZXTyB43KARyNGCsHZ2
+2025-03-31 23:50:44,440 INFO [http-nio-0.0.0.0-8000-exec-2] c.fixit.FixIt.service.UserService - User XZEgSgnZZbZXTyB43KARyNGCsHZ2 has reported 1 issues, with 0 resolved
+2025-03-31 23:50:59,813 INFO [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-31 23:50:59,936 INFO [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
